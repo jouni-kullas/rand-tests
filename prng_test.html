@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>prng test</title>
+	<script type="text/javascript" src="jquery-2.1.4.min.js" ></script>
+	<script type="text/javascript" src="jstat.js" ></script>
+	<script type="text/javascript" src="Chart.js" ></script>
+	<script type="text/javascript" src="prng_test.js" ></script>
+</head>
+<body>
+<style type="text/css">
+	div.inputs {
+		float: left;
+		width: 400px;
+	}
+	.clear {
+		clear: both;
+	}
+	.error {
+		color: red;
+	}
+</style>
+
+<div class="inputs" id="input_floats">
+	<h2>Insert floats</h2> 
+	<textarea name="input" id="random_input" rows="5" cols="30"></textarea>
+	<input type="button" name="commit" id="commit_values" value="commit"/>
+	<input type="button" name="randomize" id="random_floats" value="Math.random()"/>
+</div>
+
+<div class="inputs" id="input_ints">
+	<h2>Insert integers</h2>
+	<textarea name="input" id="random_input_ints" rows="5" cols="30"></textarea>
+	<input type="button" name="commit" id="commit_values_int" value="commit"/>
+	<input type="button" name="randomize" id="random_ints" value="Math.random()"/>
+</div>
+<div class="clear"></div>
+
+
+<div id="tests">
+	<h2>Bit frequency</h2>
+	<div id="bit_frequency">
+		<canvas id="plot_frequency" width="800" height="800"></canvas>
+	</div>
+
+	<h2>Float frequency (upper 8 bits)</h2>
+	<div id="frequency">
+		<!--<canvas id="plot_float_frequency" width="400" height="400"></canvas>-->
+	</div>
+
+	<h2>Float frequency (lower 8 bits)</h2>
+	<div id="frequency_lower8bits">
+		<!--<canvas id="plot_float_frequency_lower8bits" width="400" height="400"></canvas>-->
+	</div>
+
+	<h2>Substring bit frequencies (64bit substrings)</h2>
+	<div id="substring_bitfrequency">
+		<canvas id="plot_substring_freq" width="800" height="800"></canvas>
+	</div>
+
+
+	<h2>Bit gap test</h2>
+	<div id="gap">
+		<canvas id="plot_plot" width="400" height="400"></canvas>
+	</div>
+</div>
+
+</body>
